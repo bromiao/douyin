@@ -1,33 +1,33 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import routes from './routers';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import routes from './routers'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'hash',
-  base: process.env.BASE_URL,
-  routes,
-});
+	mode: 'hash',
+	base: process.env.BASE_URL,
+	routes,
+})
 
 // 解决重复点击导航时，控制台出现报错
-const VueRouterPush = VueRouter.prototype.push;
+const VueRouterPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(to) {
-  return VueRouterPush.call(this, to).catch(err => err);
-};
+	return VueRouterPush.call(this, to).catch((err) => err)
+}
 
 // 设置登录权限，用户未登录时需要前往登录
 router.beforeEach((to, from, next) => {
-  // const { meta: { requiresAuth } } = to;
-  // // 获取当前用户是否登录
-  // console.log(to, from);
-  // const isLogin = sessionStorage.getItem('isLogin');
-  // if (requiresAuth && !isLogin) {
-  //   next({ path: '/sign' });
-  // } else {
-  //   next();
-  // }
-  next()
-});
+	// const { meta: { requiresAuth } } = to;
+	// // 获取当前用户是否登录
+	// console.log(to, from);
+	// const isLogin = sessionStorage.getItem('isLogin');
+	// if (requiresAuth && !isLogin) {
+	//   next({ path: '/sign' });
+	// } else {
+	//   next();
+	// }
+	next()
+})
 
-export default router;
+export default router
