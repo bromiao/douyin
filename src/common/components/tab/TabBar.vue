@@ -1,5 +1,8 @@
 <template>
-	<div class="tab-bar">
+	<div
+		class="tab-bar"
+		ref="tabBar"
+	>
 		<TabItem
 			tab-title="视频"
 			nav-path="/video"
@@ -36,6 +39,9 @@ export default {
 	components: {
 		TabItem,
 	},
+	mounted() {
+		this.$refs.tabBar.style.top = `${window.innerHeight - 60}px`
+	},
 }
 </script>
 
@@ -45,7 +51,8 @@ export default {
 	width: 100vw;
 	height: 60px;
 	position: fixed;
-	top: calc(100vh - 60px);
+	// bottom: 0;
+	// top: calc(100vh - 160px);
 	left: 0;
 	display: flex;
 	justify-content: space-around;

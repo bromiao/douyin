@@ -288,7 +288,7 @@ export default {
 				this.playAction(this.page - 1)
 				this.$refs.barrage[this.page - 1].barrageIsShow = true
 			}
-		}, 30)
+		}, 100)
 
 		window.addEventListener('beforeunload', (e) => this.before_unload_page(e))
 	},

@@ -32,11 +32,16 @@ export default {
 				// 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器.
 				fluid: true,
 				sources: [
+					// {
+					// 	type: 'video/mp4', // 类型
+					// 	// src: require('@/assets/videos/sucai.mp4'),
+					// 	// src: this.video.url,
+					// 	src: 'https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm',
+					// },
 					{
 						type: 'video/mp4', // 类型
-						// src: require('@/assets/videos/sucai.mp4'),
-						// src: this.video.url,
-						src: 'https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm',
+						src: this.video.url,
+						// src: '/static/video/bldxx.avi',
 					},
 				],
 				// 视频宽度,获取客户端宽度
