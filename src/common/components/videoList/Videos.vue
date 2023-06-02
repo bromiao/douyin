@@ -113,7 +113,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/deep/ .vjs-big-play-button {
+		::v-deep .vjs-big-play-button {
 			display: none;
 			position: absolute;
 			width: 80px;
@@ -129,7 +129,7 @@ export default {
 				color: rgba(255, 255, 255, 0.7);
 			}
 		}
-		/deep/ .video-js {
+		::v-deep .video-js {
 			height: calc(100vh - 120px);
 		}
 	}

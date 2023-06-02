@@ -99,7 +99,7 @@ export default {
 	flex: 1;
 	padding: 0 60px;
 	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0);
+	background-color: #000;
 	.bar-fun {
 		.iconfont {
 			font-size: 28px;
